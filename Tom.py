@@ -77,20 +77,21 @@ def output(sorted_results):
                 out.write("%d\t: %s\n" % (v,k))
 
 
-    
-# User input (loop if empty str)
-key = ''
-while (key == ''):
-    key = input("Search: ")
+while (True):
+    master = {}
+    # User input (loop if empty str)
+    key = ''
+    while (key == ''):
+        key = input("Search: ")
 
-# Split key by spaces
-keys = key.split(" ")
-keys = [k.lower() for k in keys]
+    # Split key by spaces
+    keys = key.split(" ")
+    keys = [k.lower() for k in keys]
 
-# Algo proper
-search(keys, root)
-sorted_results = sorted( ((v,k) for k,v in master.items()), reverse=True)
-output(sorted_results)
+    # Algo proper
+    search(keys, root)
+    sorted_results = sorted( ((v,k) for k,v in master.items()), reverse=True)
+    output(sorted_results)
 
 
 
